@@ -1,0 +1,61 @@
+PODS:
+  - Alamofire (5.6.4)
+  - GoogleMaps (7.2.0):
+    - GoogleMaps/Maps (= 7.2.0)
+  - GoogleMaps/Base (7.2.0)
+  - GoogleMaps/Maps (7.2.0):
+    - GoogleMaps/Base
+  - IQKeyboardManagerSwift (6.5.10)
+  - JXPageControl (0.1.5):
+    - JXPageControl/Common (= 0.1.5)
+    - JXPageControl/Jump (= 0.1.5)
+    - JXPageControl/Transform (= 0.1.5)
+  - JXPageControl/Common (0.1.5)
+  - JXPageControl/Jump (0.1.5):
+    - JXPageControl/Common
+  - JXPageControl/Transform (0.1.5):
+    - JXPageControl/Common
+  - Kingfisher (7.4.1)
+  - Localize-Swift (3.2.0):
+    - Localize-Swift/LocalizeSwiftCore (= 3.2.0)
+    - Localize-Swift/UIKit (= 3.2.0)
+  - Localize-Swift/LocalizeSwiftCore (3.2.0)
+  - Localize-Swift/UIKit (3.2.0):
+    - Localize-Swift/LocalizeSwiftCore
+  - lottie-ios (4.1.1)
+  - MOLH (1.4.3)
+
+DEPENDENCIES:
+  - Alamofire
+  - GoogleMaps
+  - IQKeyboardManagerSwift
+  - JXPageControl
+  - Kingfisher
+  - Localize-Swift
+  - lottie-ios
+  - MOLH
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - GoogleMaps
+    - IQKeyboardManagerSwift
+    - JXPageControl
+    - Kingfisher
+    - Localize-Swift
+    - lottie-ios
+    - MOLH
+
+SPEC CHECKSUMS:
+  Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
+  GoogleMaps: 65ce5426e2398bb81433c8076f2ab6419c2c5537
+  IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
+  JXPageControl: e9487b39e2e58fc17790833214f3b8e935bef98b
+  Kingfisher: cd762a593a61b2fbecf7645c00f9a801a3ebfc9c
+  Localize-Swift: 6f4475136bdb0d7b2882ea3d4ea919d70142b232
+  lottie-ios: efa7224964a14f690efc7d3996e7dfebdcd3b499
+  MOLH: e45827d200aeb1310641090fd8cd03ad2b42ae72
+
+PODFILE CHECKSUM: 60bdde0b8762c9b4d8a95cff381cca0dab520b69
+
+COCOAPODS: 1.12.0
