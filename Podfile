@@ -14,5 +14,6 @@ target 'KibreetService' do
   pod 'Localize-Swift'
   pod 'JXPageControl'
   pod 'GoogleMaps'
+  pod 'AEOTPTextField'
 
 end

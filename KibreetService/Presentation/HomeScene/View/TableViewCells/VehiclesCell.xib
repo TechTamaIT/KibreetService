@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="85" id="KGk-i7-Jjw" customClass="VehiclesCell" customModule="KibreetService" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZBZ-Vd-Iqx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="86"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ke-oF-YOo" customClass="CardView" customModule="KibreetService" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HWT | 6290" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOc-J7-SlO">
+                                        <rect key="frame" x="16" y="12" width="94" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shell Helix" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZ0-ya-qXa">
+                                        <rect key="frame" x="16" y="37" width="71.333333333333329" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" name="mapCellSecondColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenCheck" translatesAutoresizingMaskIntoConstraints="NO" id="pd7-Q0-SnN">
+                                        <rect key="frame" x="279" y="24.666666666666671" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="AJ3-dc-OUL"/>
+                                            <constraint firstAttribute="height" constant="25" id="zMv-d5-LqM"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" name="carInfoCellColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="0hR-6A-Nkd"/>
+                                    <constraint firstItem="rZ0-ya-qXa" firstAttribute="leading" secondItem="gOc-J7-SlO" secondAttribute="leading" id="Cuq-l5-9l8"/>
+                                    <constraint firstItem="rZ0-ya-qXa" firstAttribute="top" secondItem="gOc-J7-SlO" secondAttribute="bottom" constant="4" id="LDN-LE-74b"/>
+                                    <constraint firstItem="pd7-Q0-SnN" firstAttribute="centerY" secondItem="3Ke-oF-YOo" secondAttribute="centerY" id="PbJ-MD-oAV"/>
+                                    <constraint firstItem="gOc-J7-SlO" firstAttribute="leading" secondItem="3Ke-oF-YOo" secondAttribute="leading" constant="16" id="gck-cf-688"/>
+                                    <constraint firstAttribute="trailing" secondItem="pd7-Q0-SnN" secondAttribute="trailing" constant="16" id="hjE-Vu-ASr"/>
+                                    <constraint firstItem="gOc-J7-SlO" firstAttribute="top" secondItem="3Ke-oF-YOo" secondAttribute="top" constant="12" id="vGI-SA-e2X"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="_cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_shadowColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="86" id="geC-4U-udj"/>
+                            <constraint firstItem="3Ke-oF-YOo" firstAttribute="top" secondItem="ZBZ-Vd-Iqx" secondAttribute="top" id="hjH-EM-Bgr"/>
+                            <constraint firstItem="3Ke-oF-YOo" firstAttribute="leading" secondItem="ZBZ-Vd-Iqx" secondAttribute="leading" id="yIm-xF-bq2"/>
+                            <constraint firstAttribute="trailing" secondItem="3Ke-oF-YOo" secondAttribute="trailing" id="zsl-Mo-8a8"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ZBZ-Vd-Iqx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="5bO-qp-Uek"/>
+                    <constraint firstAttribute="trailing" secondItem="ZBZ-Vd-Iqx" secondAttribute="trailing" id="Nye-Ni-CaR"/>
+                    <constraint firstItem="ZBZ-Vd-Iqx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="cCq-EL-1N0"/>
+                    <constraint firstAttribute="bottom" secondItem="ZBZ-Vd-Iqx" secondAttribute="bottom" id="rlB-1h-yLt"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="checkMarkImage" destination="pd7-Q0-SnN" id="VNa-AJ-k9Z"/>
+                <outlet property="descriptionLabel" destination="rZ0-ya-qXa" id="TWd-VA-tb3"/>
+                <outlet property="maintitleLabel" destination="gOc-J7-SlO" id="91u-tH-fAR"/>
+            </connections>
+            <point key="canvasLocation" x="138.93129770992365" y="28.52112676056338"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="greenCheck" width="25" height="25"/>
+        <namedColor name="carInfoCellColor">
+            <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="mapCellSecondColor">
+            <color red="0.56862745098039214" green="0.56862745098039214" blue="0.56862745098039214" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

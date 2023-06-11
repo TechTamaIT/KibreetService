@@ -1,4 +1,5 @@
 PODS:
+  - AEOTPTextField (1.2.6)
   - Alamofire (5.6.4)
   - GoogleMaps (7.2.0):
     - GoogleMaps/Maps (= 7.2.0)
@@ -26,6 +27,7 @@ PODS:
   - MOLH (1.4.3)
 
 DEPENDENCIES:
+  - AEOTPTextField
   - Alamofire
   - GoogleMaps
   - IQKeyboardManagerSwift
@@ -37,6 +39,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - AEOTPTextField
     - Alamofire
     - GoogleMaps
     - IQKeyboardManagerSwift
@@ -47,6 +50,7 @@ SPEC REPOS:
     - MOLH
 
 SPEC CHECKSUMS:
+  AEOTPTextField: a275823fde05601c5da7f8fb66aaecb41289b370
   Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
   GoogleMaps: 65ce5426e2398bb81433c8076f2ab6419c2c5537
   IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
@@ -56,6 +60,6 @@ SPEC CHECKSUMS:
   lottie-ios: efa7224964a14f690efc7d3996e7dfebdcd3b499
   MOLH: e45827d200aeb1310641090fd8cd03ad2b42ae72
 
-PODFILE CHECKSUM: 60bdde0b8762c9b4d8a95cff381cca0dab520b69
+PODFILE CHECKSUM: 8b1aecbeec8f6144ca5e7b6d8d27805e0e6adb51
 
 COCOAPODS: 1.12.0

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CarInfoView" customModule="kabreet" customModuleProvider="target">
+            <connections>
+                <outlet property="carCodeLabel" destination="Sbo-d0-sad" id="8pI-89-Raq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="92"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v9W-Kc-hBQ">
+                    <rect key="frame" x="0.0" y="0.0" width="390" height="92"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KUe-qC-zXh" customClass="CardView" customModule="kabreet" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="390" height="72"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carInfo" translatesAutoresizingMaskIntoConstraints="NO" id="D3K-p9-HVB">
+                                    <rect key="frame" x="20" y="12" width="52" height="48"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="52" id="30T-K0-TL8"/>
+                                        <constraint firstAttribute="height" constant="48" id="aMi-9z-4AP"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="63193" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sbo-d0-sad">
+                                    <rect key="frame" x="90" y="12" width="57" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is your car code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCg-ok-6Zm">
+                                    <rect key="frame" x="90" y="44" width="96.666666666666686" height="15.666666666666664"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="is your car code"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" name="carInfoHeaderColor"/>
+                            <constraints>
+                                <constraint firstItem="Sbo-d0-sad" firstAttribute="leading" secondItem="D3K-p9-HVB" secondAttribute="trailing" constant="18" id="SmI-Bl-x9b"/>
+                                <constraint firstItem="D3K-p9-HVB" firstAttribute="leading" secondItem="KUe-qC-zXh" secondAttribute="leading" constant="20" id="TaR-Qm-tcZ"/>
+                                <constraint firstItem="D3K-p9-HVB" firstAttribute="centerY" secondItem="KUe-qC-zXh" secondAttribute="centerY" id="Xm4-an-LWw"/>
+                                <constraint firstItem="Sbo-d0-sad" firstAttribute="top" secondItem="KUe-qC-zXh" secondAttribute="top" constant="12" id="bKJ-Uj-WNO"/>
+                                <constraint firstItem="bCg-ok-6Zm" firstAttribute="leading" secondItem="Sbo-d0-sad" secondAttribute="leading" id="hiN-RK-oqV"/>
+                                <constraint firstAttribute="height" constant="72" id="rMI-VW-diC"/>
+                                <constraint firstItem="bCg-ok-6Zm" firstAttribute="top" secondItem="Sbo-d0-sad" secondAttribute="bottom" constant="8" symbolic="YES" id="whR-A3-W63"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="_bordercolor">
+                                    <color key="value" name="mainColor"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="_borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="_shadowColor">
+                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="_cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="92" id="6k0-nC-J8l"/>
+                        <constraint firstItem="KUe-qC-zXh" firstAttribute="leading" secondItem="v9W-Kc-hBQ" secondAttribute="leading" id="PtR-km-F9b"/>
+                        <constraint firstItem="KUe-qC-zXh" firstAttribute="top" secondItem="v9W-Kc-hBQ" secondAttribute="top" id="ik5-Ua-k5W"/>
+                        <constraint firstAttribute="trailing" secondItem="KUe-qC-zXh" secondAttribute="trailing" id="sBo-Ll-d4T"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="v9W-Kc-hBQ" secondAttribute="bottom" id="3tf-Aw-eTr"/>
+                <constraint firstItem="v9W-Kc-hBQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="4Pd-x2-LBt"/>
+                <constraint firstAttribute="trailing" secondItem="v9W-Kc-hBQ" secondAttribute="trailing" id="csJ-VI-8XC"/>
+                <constraint firstItem="v9W-Kc-hBQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fwr-io-efD"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="116.92307692307692" y="14.218009478672984"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="carInfo" width="52" height="48"/>
+        <namedColor name="carInfoHeaderColor">
+            <color red="0.97254901960784312" green="0.71372549019607845" blue="0.15294117647058825" alpha="0.10000000149011612" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="mainColor">
+            <color red="0.97254901960784312" green="0.71372549019607845" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
