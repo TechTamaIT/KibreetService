@@ -31,4 +31,21 @@ class SubmitServiceViewModel {
         }
         .store(in: &subscriptions)
     }
+    
+    func updateServiceRquest(id: Int, visiteId: Int, attachments: [Attachment]) {
+        LoadingManager().showLoadingDialog()
+        SubmitServiceRepository().updateService(id: id, visiteId: visiteId, amount: Double(amount.value) ?? 0.0, vehicleKilometers: Double(kilometers.value) ?? 0.0, attachments: attachments).sink { [unowned self] completion in
+            switch completion {
+            case .failure(let error):
+                LoadingManager().removeLoadingDialog()
+                message.send(error.localizedDescription)
+            case .finished:
+                break
+            }
+        } receiveValue: { [unowned self] visiteData in
+            LoadingManager().removeLoadingDialog()
+            result.send(visiteData)
+        }
+        .store(in: &subscriptions)
+    }
 }

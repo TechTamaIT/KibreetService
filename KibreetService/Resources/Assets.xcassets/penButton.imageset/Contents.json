@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "penButton.png",
+      "filename" : "Group 163810.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "penButton@2x.png",
+      "filename" : "Group 163810@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "penButton@3x.png",
+      "filename" : "Group 163810@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

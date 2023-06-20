@@ -7,14 +7,16 @@
 
 import UIKit
 import Combine
+import CoreNFC
 
 class CarDetailsVC: UIViewController {
 
     @IBOutlet weak var carInfoTableView: UITableView!
+    @IBOutlet weak var noCarsView: UIView!
     private let carsInfoViewModel = CarsInfoViewModel()
     let refreshControl = UIRefreshControl()
     private var bindings = Set<AnyCancellable>()
-    
+    var session: NFCNDEFReaderSession?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,22 +25,31 @@ class CarDetailsVC: UIViewController {
         carsInfoViewModel.getCarsInfo()
     }
     
+    func startSession() {
+        session = NFCNDEFReaderSession(delegate: self, queue: DispatchQueue.main, invalidateAfterFirstRead: false)
+        session?.alertMessage = "Hold your phone near the NFC Tag"
+        session?.begin()
+    }
+    
     func setupTableView() {
         carInfoTableView.delegate = self
         carInfoTableView.dataSource = self
         carInfoTableView.register(UINib(nibName: VehiclesCell.identifier, bundle: nil), forCellReuseIdentifier: VehiclesCell.identifier)
         carInfoTableView.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(refreshTableView(_:)), for: .valueChanged)
+        NotificationCenter.default.addObserver(self, selector: #selector(scanCompeleted), name: NSNotification.Name(rawValue: "scanComplete"), object: nil)
     }
     
     @objc func refreshTableView(_ sender: UIRefreshControl) {
         carsInfoViewModel.getCarsInfo()
     }
     
+    @objc func scanCompeleted() {
+        carsInfoViewModel.getCarsInfo()
+    }
+    
     @IBAction func scanButtonPressed(_ sender: UIButton) {
-        let scanVc = ScanCarViewController.instantiate(fromAppStoryboard: .AddOrder)
-        scanVc.modalPresentationStyle = .overFullScreen
-        self.present(scanVc, animated: true)
+        startSession()
     }
     
     
@@ -76,6 +87,11 @@ class CarDetailsVC: UIViewController {
     func updateUI() {
         refreshControl.endRefreshing()
         carInfoTableView.reloadData()
+        if carsInfoViewModel.result.value.count <= 0 {
+            noCarsView.isHidden = false
+        } else {
+            noCarsView.isHidden = true
+        }
     }
 }
 
@@ -97,5 +113,32 @@ extension CarDetailsVC: UITableViewDelegate, UITableViewDataSource {
         serviceVC.modalPresentationStyle = .fullScreen
         serviceVC.visiteId = carsInfoViewModel.result.value[indexPath.row].visitId
         self.present(serviceVC, animated: true)
+    }
+}
+
+
+extension CarDetailsVC: NFCNDEFReaderSessionDelegate {
+    
+    func readerSessionDidBecomeActive(_ session: NFCNDEFReaderSession) {
+        print("session activated")
+    }
+    
+    func readerSession(_ session: NFCNDEFReaderSession, didDetectNDEFs messages: [NFCNDEFMessage]) {
+        var result = ""
+        for payload in messages[0].records {
+            result += String.init(data: payload.payload.advanced(by: 3), encoding: .utf8)!
+        }
+        
+        print(result)
+        session.alertMessage = "Tag scan successfully"
+        session.invalidate()
+        let otpVc = OTPViewController.instantiate(fromAppStoryboard: .AddOrder)
+        otpVc.modalPresentationStyle = .overFullScreen
+        otpVc.scannedText = result
+        self.present(otpVc, animated: true)
+    }
+
+    func readerSession(_ session: NFCNDEFReaderSession, didInvalidateWithError error: Error) {
+        print(error.localizedDescription)
     }
 }

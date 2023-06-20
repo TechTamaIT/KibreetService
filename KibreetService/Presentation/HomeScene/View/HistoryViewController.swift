@@ -13,6 +13,7 @@ class HistoryViewController: UIViewController {
     @IBOutlet weak var noDataLabel: UILabel!
     @IBOutlet weak var vehiclesTableView: UITableView!
     private let carsInfoViewModel = CarsInfoViewModel()
+    let refreshControl = UIRefreshControl()
     private var bindings = Set<AnyCancellable>()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +28,13 @@ class HistoryViewController: UIViewController {
     func setupTableView() {
         vehiclesTableView.delegate = self
         vehiclesTableView.dataSource = self
+        vehiclesTableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(refreshTableView(_:)), for: .valueChanged)
         vehiclesTableView.register(UINib(nibName: VehiclesCell.identifier, bundle: nil), forCellReuseIdentifier: VehiclesCell.identifier)
+    }
+    
+    @objc func refreshTableView(_ sender: UIRefreshControl) {
+        carsInfoViewModel.getCarsInfo(onGoing: false)
     }
     
     func bindingViewModelToView(){
@@ -45,9 +52,12 @@ class HistoryViewController: UIViewController {
 
 
     func updateUI() {
+        refreshControl.endRefreshing()
         vehiclesTableView.reloadData()
         if carsInfoViewModel.result.value.count <= 0 {
             noDataLabel.isHidden = false
+        } else {
+            noDataLabel.isHidden = true
         }
     }
 
@@ -63,6 +73,14 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
         let car = carsInfoViewModel.result.value[indexPath.row]
         cell.configureCell(imageName: "greenCheck", data: car)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        let detailsVc = OrderHistoryViewController.instantiate(fromAppStoryboard: .AddOrder)
+        detailsVc.visiteId = carsInfoViewModel.result.value[indexPath.row].visitId
+        detailsVc.modalPresentationStyle = .fullScreen
+        self.present(detailsVc, animated: true)
     }
 }
 

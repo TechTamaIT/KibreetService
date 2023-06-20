@@ -30,4 +30,11 @@ class InvoiceCell: UITableViewCell {
         totalLabel.text = "\(data.price * data.amount) SAR"
     }
     
+    func configureInoviceCell(data: InvoiceDetailsService) {
+        itemNameLabel.text = data.name
+        quantityLabel.text = "\(data.amount)"
+        pricePerUnitLabel.text = "\(data.price) SAR"
+        totalLabel.text = "\(data.price * data.amount) SAR"
+    }
+    
 }

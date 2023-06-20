@@ -21,9 +21,11 @@ class UploadServiceViewController: UIViewController {
     var availabilityId = 0
     var images = [UIImage]()
     var attachments = [Attachment]()
-    let picker = UIImagePickerController()
+    lazy var picker = UIImagePickerController()
     private let submitServiceViewModel = SubmitServiceViewModel()
     private var bindings = Set<AnyCancellable>()
+    var isUpdated = false
+    var service: Service?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,12 +33,13 @@ class UploadServiceViewController: UIViewController {
         setupCollectionview()
         bindViewToSubmitViewModel()
         bindingViewModelToView()
+        if isUpdated {
+            setupViewFromUpdateService()
+        }
 
     }
     
     func setupCollectionview() {
-        picker.sourceType = .photoLibrary
-        picker.delegate = self
         picturesCollectionView.delegate = self
         picturesCollectionView.dataSource = self
         picturesCollectionView.register(UINib(nibName: CarImageCell.idetifier, bundle: nil), forCellWithReuseIdentifier: CarImageCell.idetifier)
@@ -47,6 +50,22 @@ class UploadServiceViewController: UIViewController {
         serviceNameLabel.text = serviceName
         serviceNameHeaderLabel.text = serviceName + " " + "Service".localized()
         submitButton.layer.cornerRadius = 10
+    }
+    
+    func setupViewFromUpdateService() {
+        if let service = service {
+            amountTF.text = "\(service.amount)"
+            kilometersTF.text = "\(service.vehicleKilometers)"
+            serviceNameHeaderLabel.text = service.serviceTypeName + " " + "Service".localized()
+            serviceNameLabel.text = service.serviceTypeName
+            for imageURL in service.images {
+                
+                let url = URL(string: imageURL)
+                let data = try? Data(contentsOf: url!)
+                images.append(UIImage(data: data!) ?? UIImage())
+            }
+            picturesCollectionView.reloadData()
+        }
     }
     
     func bindViewToSubmitViewModel(){
@@ -78,6 +97,7 @@ class UploadServiceViewController: UIViewController {
                 print("SUCCESS ")
             }
         }, receiveValue: {[unowned self] value in
+            self.attachments.removeAll()
             if value != nil {
                 self.showLocalizedAlert(style: .alert, title: "Error".localized(), message: value!, buttonTitle: "Ok".localized())
             }
@@ -85,12 +105,16 @@ class UploadServiceViewController: UIViewController {
     }
     
     func finishSubmitting() {
+        attachments.removeAll()
         self.presentingViewController?.presentingViewController?.dismiss(animated: true)
     }
     
     
     
     func openCameraPicker() {
+        picker.sourceType = .camera
+        picker.allowsEditing = true
+        picker.delegate = self
         self.present(picker, animated: true)
     }
 
@@ -110,7 +134,12 @@ class UploadServiceViewController: UIViewController {
                 }
 
             }
-            submitServiceViewModel.submitServiceRequest(visiteId: visiteId, availabilityId: availabilityId, attachments: attachments)
+            
+            if isUpdated {
+                submitServiceViewModel.updateServiceRquest(id: service?.id ?? 0, visiteId: visiteId, attachments: attachments)
+            } else {
+                submitServiceViewModel.submitServiceRequest(visiteId: visiteId, availabilityId: availabilityId, attachments: attachments)
+            }
         }
     }
 }

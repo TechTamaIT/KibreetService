@@ -32,6 +32,7 @@ class InvoiceViewController: UIViewController {
         setupView()
         setupTableView()
         bindDataToView()
+        bindingViewModelToView()
         invoiceViewModel.getInvoiceSummary(visitedId: visiteId)
 
         // Do any additional setup after loading the view.
@@ -93,11 +94,76 @@ class InvoiceViewController: UIViewController {
         }.store(in: &bindings)
     }
     
+    func bindingViewModelToView(){
+        invoiceViewModel.result.sink(receiveCompletion: {completion in
+            switch completion {
+            case .failure(let error):
+                self.showLocalizedAlert(style: .alert, title: "Error".localized(), message: error.localizedDescription, buttonTitle: "Ok".localized())
+            case .finished:
+                print("SUCCESS ")
+            }
+        }, receiveValue: {[unowned self] value in
+            self.updateUI()
+        }).store(in: &bindings)
+        
+        invoiceViewModel.message.sink(receiveCompletion: {completion in
+            switch completion {
+            case .failure(let error):
+                self.showLocalizedAlert(style: .alert, title: "Error".localized(), message: error.localizedDescription, buttonTitle: "Ok".localized())
+            case .finished:
+                print("SUCCESS ")
+            }
+        }, receiveValue: {[unowned self] value in
+            if value == "success"{
+                self.updateUI()
+            }else{
+                if value != nil {
+                    self.showLocalizedAlert(style: .alert, title: "Error".localized(), message: value!, buttonTitle: "Ok".localized())
+                }
+            }
+        }).store(in: &bindings)
+        
+        invoiceViewModel.submitResult.sink(receiveCompletion: {completion in
+            switch completion {
+            case .failure(let error):
+                self.showLocalizedAlert(style: .alert, title: "Error".localized(), message: error.localizedDescription, buttonTitle: "Ok".localized())
+            case .finished:
+                print("SUCCESS ")
+            }
+        }, receiveValue: {[unowned self] value in
+            self.goToSuccessPage()
+        }).store(in: &bindings)
+        
+        invoiceViewModel.submitMessage.sink(receiveCompletion: {completion in
+            switch completion {
+            case .failure(let error):
+                self.showLocalizedAlert(style: .alert, title: "Error".localized(), message: error.localizedDescription, buttonTitle: "Ok".localized())
+            case .finished:
+                print("SUCCESS ")
+            }
+        }, receiveValue: {[unowned self] value in
+            
+            if value != nil {
+                self.showLocalizedAlert(style: .alert, title: "Error".localized(), message: value!, buttonTitle: "Ok".localized())
+            }
+        }).store(in: &bindings)
+    }
+    
+    func updateUI() {
+        invoicesTableView.reloadData()
+    }
+
+    
     @IBAction func backButtonDidPressed(_ sender: UIButton) {
         self.dismiss(animated: true)
     }
     
     @IBAction func nextButtonDidPressed(_ sender: UIButton) {
+        let driverCode = UserInfoManager.shared.getDriverCode()
+        invoiceViewModel.submitOrder(driverCode: driverCode, visiteId: visiteId)
+    }
+    
+    func goToSuccessPage() {
         let successVc = SuccessViewController.instantiate(fromAppStoryboard: .AddOrder)
         successVc.modalPresentationStyle = .fullScreen
         self.present(successVc, animated: true)

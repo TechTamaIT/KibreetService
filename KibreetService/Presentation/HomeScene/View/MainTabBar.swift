@@ -14,6 +14,6 @@ class MainTabBar: UITabBarController {
         self.tabBar.items?[0].title = "History".localized()
         self.tabBar.items?[1].title = "Vehicles".localized()
         self.tabBar.items?[2].title = "Setting".localized()
-        self.selectedIndex = 1
+       // self.selectedIndex = 1
     }
 }

@@ -11,4 +11,5 @@ import Combine
 
 protocol InvoiceSummaryRepositoryProtocol {
     func getInvoiceSummary(visiteId: Int) -> Future<InvoiceSummaryModel, Error>
+    func submitOrder(driverCode: Int, visitedId: Int) -> Future<SubmitOrderModel, Error>
 }

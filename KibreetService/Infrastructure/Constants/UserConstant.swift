@@ -13,4 +13,5 @@ struct UserConstant {
         static let userFullName = "userFullName"
         static let isFirstTime = "isFirstTime"
         static let isOnboardingPassed = "isOnboardingPassed"
+        static let driverCode = "driverCode"
 }

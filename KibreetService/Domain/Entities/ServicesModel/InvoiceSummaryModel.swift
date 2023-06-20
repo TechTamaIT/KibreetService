@@ -12,7 +12,7 @@ struct InvoiceSummaryModel: Codable {
     let date, invoiceNumber, companyName, companyAddress: String
     let companyContactNumber, supplierName, supplierAddress, supplierContactNumber: String
     let services: [ServiceSummary]
-    let tax, subtotal, total: Int
+    let tax, subtotal, total: Double
 }
 
 // MARK: - Service

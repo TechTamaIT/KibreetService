@@ -6,33 +6,44 @@
 //
 
 import UIKit
+import CoreNFC
 
 class ScanCarViewController: UIViewController {
 
-    @IBOutlet weak var mainView: UIView!
     
-    @IBOutlet weak var scanTitleLabel: UILabel!
-    @IBOutlet weak var scanDescriptionLabel: UILabel!
-    @IBOutlet weak var scanImageView: UIImageView!
-    
-    @IBOutlet weak var scanButton: UIButton!
+    var session: NFCNDEFReaderSession?
+    var timer: Timer?
+    var NFCCode = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupView()
-
-        // Do any additional setup after loading the view.
+        startSession()
     }
     
-    func setupView() {
-        self.view.backgroundColor = .black.withAlphaComponent(0.25)
-        mainView.roundViewCorners([.topLeft, .topRight], radius: 10)
-        scanButton.layer.cornerRadius = 10
+    func startSession() {
+        
+        session = NFCNDEFReaderSession(delegate: self, queue: DispatchQueue.main, invalidateAfterFirstRead: false)
+        session?.alertMessage = "Hold your phone near the NFC Tag"
+        session?.begin()
     }
     
-    @IBAction func scanButtonDidPressed(_ sender: UIButton) {
+    @objc func timerAction() {
+        timer?.invalidate()
+        timer = nil
         let otpVc = OTPViewController.instantiate(fromAppStoryboard: .AddOrder)
+        otpVc.scannedText = NFCCode
         otpVc.modalPresentationStyle = .overFullScreen
         self.present(otpVc, animated: true)
-//        self.dismiss(animated: true)
+    }
+}
+
+
+extension ScanCarViewController: NFCNDEFReaderSessionDelegate {
+    
+    func readerSession(_ session: NFCNDEFReaderSession, didDetectNDEFs messages: [NFCNDEFMessage]) {
+
+    }
+
+    func readerSession(_ session: NFCNDEFReaderSession, didInvalidateWithError error: Error) {
+        print(error.localizedDescription)
     }
 }

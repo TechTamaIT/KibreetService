@@ -11,6 +11,10 @@ import Combine
 class InvoiceSummaryViewModel {
     let result = PassthroughSubject<InvoiceSummaryModel,Error>()
     let message = CurrentValueSubject<String?, Error>(nil)
+    
+    let submitResult = PassthroughSubject<SubmitOrderModel,Error>()
+    let submitMessage = CurrentValueSubject<String?, Error>(nil)
+    
     private var subscriptions = Set<AnyCancellable>()
     
     @Published var invoiceNo = ""
@@ -27,6 +31,7 @@ class InvoiceSummaryViewModel {
     var serviceSummary = [ServiceSummary]()
     
     func getInvoiceSummary(visitedId: Int) {
+        LoadingManager().showLoadingDialog()
         InvoiceSummaryRepository().getInvoiceSummary(visiteId: visitedId).sink { [unowned self] completion in
             switch completion {
             case .failure(let error):
@@ -38,18 +43,35 @@ class InvoiceSummaryViewModel {
         } receiveValue: { [unowned self] invoiceData in
             LoadingManager().removeLoadingDialog()
             self.invoiceNo = invoiceData.invoiceNumber
-            self.invoiceDate = invoiceData.date
+            self.invoiceDate = invoiceData.date.date()
             self.companyName = invoiceData.companyName
-            self.companyNumber = invoiceData.companyContactNumber
+            self.companyNumber = "Contact no: ".localized() + invoiceData.companyContactNumber
             self.companyAddress = invoiceData.companyAddress
-            self.serviceSupplierNumber = invoiceData.supplierName
-            self.serviceSupplierNumber = invoiceData.supplierContactNumber
+            self.serviceSupplierName = invoiceData.supplierName
+            self.serviceSupplierNumber = "Contact no: ".localized() + invoiceData.supplierContactNumber
             self.serviceSupplierAddress = invoiceData.supplierAddress
             self.subTotal = "\(invoiceData.subtotal) SAR"
             self.tax = "\(invoiceData.tax) SAR"
-            self.total = "\(invoiceData.total) SAR"
+            self.total = String(format: "%.2f", invoiceData.total) + " SAR"
             self.serviceSummary = invoiceData.services
             result.send(invoiceData)
+        }
+        .store(in: &subscriptions)
+    }
+    
+    func submitOrder(driverCode: String, visiteId: Int) {
+        LoadingManager().showLoadingDialog()
+        InvoiceSummaryRepository().submitOrder(driverCode: Int(driverCode) ?? 0, visitedId: visiteId).sink { [unowned self] completion in
+            switch completion {
+            case .failure(let error):
+                LoadingManager().removeLoadingDialog()
+                submitMessage.send(error.localizedDescription)
+            case .finished:
+                break
+            }
+        } receiveValue: { [unowned self] returnMessage in
+            LoadingManager().removeLoadingDialog()
+            submitResult.send(returnMessage)
         }
         .store(in: &subscriptions)
     }

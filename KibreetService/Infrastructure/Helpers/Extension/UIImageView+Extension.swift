@@ -10,7 +10,7 @@ import UIKit
 import Kingfisher
 extension UIImageView {
     
-    func loadImageFromUrl (imgUrl : String?,defString:String = "Location") {
+    func loadImageFromUrl (imgUrl : String?,defString:String = "oil") {
             DispatchQueue.main.async() {
             
                  let defualtImage = UIImage(named: defString)

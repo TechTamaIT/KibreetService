@@ -14,8 +14,6 @@ class SuccessViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         startTimer()
-
-        // Do any additional setup after loading the view.
     }
     
     func startTimer() {
@@ -25,7 +23,9 @@ class SuccessViewController: UIViewController {
     @objc func timerAction() {
         timer?.invalidate()
         timer = nil
-        self.dismiss(animated: true)
+        guard let homeVC = UIStoryboard.init(name:"Home", bundle: nil).instantiateViewController(withIdentifier: "MainTabBar") as? UITabBarController else {return}
+        UIApplication.shared.windows.first?.rootViewController = homeVC
+        UIApplication.shared.windows.first?.makeKeyAndVisible()
     }
 
 }

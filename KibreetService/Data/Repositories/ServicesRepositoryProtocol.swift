@@ -10,4 +10,5 @@ import Combine
 
 protocol ServicesRepositoryProtocol {
     func getServicesInfo(visiteId: Int) -> Future<ServicesListModel, Error>
+    func deleteService(visiteId: Int, serviceId: Int) -> Future<DeleteServiceModel,Error>
 }

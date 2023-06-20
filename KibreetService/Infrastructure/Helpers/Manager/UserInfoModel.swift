@@ -70,6 +70,18 @@ class UserInfoManager {
             return false
         }
     }
+    
+    func setDriverCode(_ code:String){
+        defaults.set(code, forKey: UserConstant.driverCode)
+    }
+
+    func getDriverCode()->String{
+        if (defaults.object(forKey: UserConstant.driverCode) != nil) {
+            return defaults.string(forKey: UserConstant.driverCode) ?? ""
+        }else{
+            return ""
+        }
+    }
 
 }
 

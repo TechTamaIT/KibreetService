@@ -109,24 +109,79 @@ class ServicesViewController: UIViewController {
         
         servicesViewModel.message.sink(receiveCompletion: {completion in
             switch completion {
-                case .failure(let error):
+            case .failure(let error):
                 self.showLocalizedAlert(style: .alert, title: "Error".localized(), message: error.localizedDescription, buttonTitle: "Ok".localized())
-                case .finished:
-                        print("SUCCESS ")
+            case .finished:
+                print("SUCCESS ")
+            }
+        }, receiveValue: {[unowned self] value in
+            if value == "success"{
+                self.updateUI()
+            }else{
+                if value != nil {
+                    self.showLocalizedAlert(style: .alert, title: "Error".localized(), message: value!, buttonTitle: "Ok".localized())
                 }
-            }, receiveValue: {[unowned self] value in
-                if value == "success"{
-                    self.updateUI()
-                }else{
-                    if value != nil {
-                        self.showLocalizedAlert(style: .alert, title: "Error".localized(), message: value!, buttonTitle: "Ok".localized())
-                    }
+            }
+        }).store(in: &bindings)
+        
+        
+        
+        servicesViewModel.deleteResult.sink(receiveCompletion: {completion in
+            switch completion {
+            case .failure(let error):
+                self.showLocalizedAlert(style: .alert, title: "Error".localized(), message: error.localizedDescription, buttonTitle: "Ok".localized())
+            case .finished:
+                print("SUCCESS ")
+            }
+        }, receiveValue: {[unowned self] value in
+            self.deleteServiceHandler()
+        }).store(in: &bindings)
+        
+        servicesViewModel.deleteMessage.sink(receiveCompletion: {completion in
+            switch completion {
+            case .failure(let error):
+                self.showLocalizedAlert(style: .alert, title: "Error".localized(), message: error.localizedDescription, buttonTitle: "Ok".localized())
+            case .finished:
+                print("SUCCESS ")
+            }
+        }, receiveValue: {[unowned self] value in
+            if value == "success"{
+                self.deleteServiceHandler()
+            }else{
+                if value != nil {
+                    self.showLocalizedAlert(style: .alert, title: "Error".localized(), message: value!, buttonTitle: "Ok".localized())
                 }
-            }).store(in: &bindings)
+            }
+        }).store(in: &bindings)
     }
     
     func updateUI() {
         servicesTableview.reloadData()
+    }
+    
+    func deleteServiceHandler() {
+        servicesViewModel.getServicesInfo(visiteId: visiteId)
+    }
+    
+    func deleteServiceAlert(serviceId: Int) {
+        let deleteAlert = UIAlertController(title: "Warning".localized(), message: "Do you want to delete this service".localized(), preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok".localized(), style: .default) { _ in
+            self.servicesViewModel.deleteService(visiteId: self.visiteId, serviceId: serviceId)
+        }
+
+        let cancelAction = UIAlertAction(title: "Cancel".localized(), style: .cancel)
+        
+        deleteAlert.addAction(okAction)
+        deleteAlert.addAction(cancelAction)
+        self.present(deleteAlert, animated: true)
+    }
+    
+    func updateService(service: Service) {
+        let updateService = UploadServiceViewController.instantiate(fromAppStoryboard: .AddOrder)
+        updateService.isUpdated = true
+        updateService.service = service
+        updateService.modalPresentationStyle = .fullScreen
+        self.present(updateService, animated: true)
     }
 
     @IBAction func expandViewButtonPressed(_ sender: UIButton) {
@@ -161,6 +216,14 @@ extension ServicesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ServiceCell.identifier, for: indexPath) as? ServiceCell else { return UITableViewCell() }
         cell.configureCell(data: servicesViewModel.getService(index: indexPath.row))
+        
+        cell.deleteTapped = {[weak self] serviceId in
+            self?.deleteServiceAlert(serviceId: serviceId)
+        }
+        
+        cell.editTapped = {[weak self] service in
+            self?.updateService(service: service)
+        }
         return cell
     }
     

@@ -10,4 +10,6 @@ import Combine
 
 protocol SubmitServiceRepositoryProtocol {
     func submitService(visiteId: Int, availabilityId: Int, amount: Double, vehicleKilometers: Double, attachments: [Attachment]) -> Future<SubmitServiceModel, Error>
+    
+    func updateService(id: Int, visiteId: Int, amount: Double, vehicleKilometers: Double, attachments: [Attachment]) -> Future<SubmitServiceModel, Error>
 }

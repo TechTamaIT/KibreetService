@@ -11,7 +11,8 @@ class ServiceCell: UITableViewCell {
     
     @IBOutlet weak var serviceNameLabel: UILabel!
     static let identifier = "ServiceCell"
-    var editTapped: ((Int) -> Void)?
+    var service: Service?
+    var editTapped: ((Service) -> Void)?
     var deleteTapped: ((Int) -> Void)?
 
     override func awakeFromNib() {
@@ -20,13 +21,18 @@ class ServiceCell: UITableViewCell {
     }
     
     func configureCell(data: Service) {
-        serviceNameLabel.text = "\(data.serviceType)"
+        serviceNameLabel.text = data.serviceTypeName
+        service = data
     }
     
     @IBAction func deleteServiceDidPressed(_ sender: UIButton) {
-        deleteTapped?(0)
+        if let service = service {
+            deleteTapped?(service.id)
+        }
     }
     @IBAction func editServiceDidPressed(_ sender: UIButton) {
-        editTapped?(0)
+        if let service = service {
+            editTapped?(service)
+        }
     }
 }

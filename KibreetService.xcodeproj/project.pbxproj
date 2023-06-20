@@ -142,6 +142,18 @@
 		96785D402A3625A2004F1940 /* InvoiceSummaryEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96785D3F2A3625A2004F1940 /* InvoiceSummaryEndPoint.swift */; };
 		96785D422A36324E004F1940 /* OrderHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96785D412A36324E004F1940 /* OrderHistoryViewController.swift */; };
 		96785D482A3679C8004F1940 /* redSpinner.json in Resources */ = {isa = PBXBuildFile; fileRef = 96785D472A3679C8004F1940 /* redSpinner.json */; };
+		96785D4A2A387ED8004F1940 /* SubmitOrderEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96785D492A387ED8004F1940 /* SubmitOrderEndPoint.swift */; };
+		96785D4C2A387F6A004F1940 /* SubmitOrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96785D4B2A387F6A004F1940 /* SubmitOrderModel.swift */; };
+		96785D4E2A388B34004F1940 /* DeleteServiceEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96785D4D2A388B34004F1940 /* DeleteServiceEndPoint.swift */; };
+		96785D502A389439004F1940 /* DeleteServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96785D4F2A389439004F1940 /* DeleteServiceModel.swift */; };
+		96785D522A38B7A5004F1940 /* UpdateServiceEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96785D512A38B7A5004F1940 /* UpdateServiceEndPoint.swift */; };
+		96785D542A39DDDA004F1940 /* ScanCarEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96785D532A39DDDA004F1940 /* ScanCarEndPoint.swift */; };
+		96785D562A39DE8D004F1940 /* ScanCarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96785D552A39DE8D004F1940 /* ScanCarModel.swift */; };
+		96785D582A39DED3004F1940 /* ScanCarRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96785D572A39DED3004F1940 /* ScanCarRepositoryProtocol.swift */; };
+		96785D5A2A39DF4B004F1940 /* ScanCarRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96785D592A39DF4B004F1940 /* ScanCarRepository.swift */; };
+		96785D5C2A39DF9A004F1940 /* OTPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96785D5B2A39DF9A004F1940 /* OTPViewModel.swift */; };
+		967B38092A3F49830016348E /* ServicesHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967B38072A3F49830016348E /* ServicesHistoryCell.swift */; };
+		967B380A2A3F49830016348E /* ServicesHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 967B38082A3F49830016348E /* ServicesHistoryCell.xib */; };
 		96C911672A33A9CB00EE1803 /* ServiceCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C911662A33A9CB00EE1803 /* ServiceCategory.swift */; };
 		96C911692A33AF3A00EE1803 /* ServiceCenterCategoriesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C911682A33AF3A00EE1803 /* ServiceCenterCategoriesProtocol.swift */; };
 		96C9116C2A33AFDB00EE1803 /* GetCategoryEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C9116B2A33AFDB00EE1803 /* GetCategoryEndPoint.swift */; };
@@ -284,6 +296,7 @@
 		961151212A2B7BE70040ABEA /* AddOrder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddOrder.storyboard; sourceTree = "<group>"; };
 		961151252A2B7CDD0040ABEA /* ScanCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCarViewController.swift; sourceTree = "<group>"; };
 		961151292A2BB3D20040ABEA /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
+		9643F6DA2A3DDE3300A38BF6 /* KibreetService.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KibreetService.entitlements; sourceTree = "<group>"; };
 		96478F252A35DB4600B8A114 /* UploadServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadServiceViewController.swift; sourceTree = "<group>"; };
 		96478F282A35E42500B8A114 /* SelectImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectImageCell.swift; sourceTree = "<group>"; };
 		96478F292A35E42500B8A114 /* SelectImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectImageCell.xib; sourceTree = "<group>"; };
@@ -306,6 +319,18 @@
 		96785D3F2A3625A2004F1940 /* InvoiceSummaryEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceSummaryEndPoint.swift; sourceTree = "<group>"; };
 		96785D412A36324E004F1940 /* OrderHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryViewController.swift; sourceTree = "<group>"; };
 		96785D472A3679C8004F1940 /* redSpinner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = redSpinner.json; sourceTree = "<group>"; };
+		96785D492A387ED8004F1940 /* SubmitOrderEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitOrderEndPoint.swift; sourceTree = "<group>"; };
+		96785D4B2A387F6A004F1940 /* SubmitOrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitOrderModel.swift; sourceTree = "<group>"; };
+		96785D4D2A388B34004F1940 /* DeleteServiceEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteServiceEndPoint.swift; sourceTree = "<group>"; };
+		96785D4F2A389439004F1940 /* DeleteServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteServiceModel.swift; sourceTree = "<group>"; };
+		96785D512A38B7A5004F1940 /* UpdateServiceEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateServiceEndPoint.swift; sourceTree = "<group>"; };
+		96785D532A39DDDA004F1940 /* ScanCarEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCarEndPoint.swift; sourceTree = "<group>"; };
+		96785D552A39DE8D004F1940 /* ScanCarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCarModel.swift; sourceTree = "<group>"; };
+		96785D572A39DED3004F1940 /* ScanCarRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCarRepositoryProtocol.swift; sourceTree = "<group>"; };
+		96785D592A39DF4B004F1940 /* ScanCarRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCarRepository.swift; sourceTree = "<group>"; };
+		96785D5B2A39DF9A004F1940 /* OTPViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewModel.swift; sourceTree = "<group>"; };
+		967B38072A3F49830016348E /* ServicesHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesHistoryCell.swift; sourceTree = "<group>"; };
+		967B38082A3F49830016348E /* ServicesHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesHistoryCell.xib; sourceTree = "<group>"; };
 		96C911662A33A9CB00EE1803 /* ServiceCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCategory.swift; sourceTree = "<group>"; };
 		96C911682A33AF3A00EE1803 /* ServiceCenterCategoriesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCenterCategoriesProtocol.swift; sourceTree = "<group>"; };
 		96C9116B2A33AFDB00EE1803 /* GetCategoryEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCategoryEndPoint.swift; sourceTree = "<group>"; };
@@ -371,6 +396,7 @@
 		96114FF32A253B650040ABEA /* KibreetService */ = {
 			isa = PBXGroup;
 			children = (
+				9643F6DA2A3DDE3300A38BF6 /* KibreetService.entitlements */,
 				961150082A2B5EF40040ABEA /* Application */,
 				961150D22A2B60D90040ABEA /* Presentation */,
 				961150AB2A2B60970040ABEA /* Data */,
@@ -641,6 +667,7 @@
 				96478F322A35EDE700B8A114 /* ServicesRepositoryProtocol.swift */,
 				96785D312A361366004F1940 /* SubmitServiceRepositoryProtocol.swift */,
 				96785D3B2A362504004F1940 /* InvoiceSummaryRepositoryProtocol.swift */,
+				96785D572A39DED3004F1940 /* ScanCarRepositoryProtocol.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -725,6 +752,7 @@
 				96785D272A35EFD4004F1940 /* ServicesInfoRepositiory.swift */,
 				96785D352A36140D004F1940 /* SubmitServiceRepository.swift */,
 				96785D3D2A362559004F1940 /* InvoiceSummaryRepository.swift */,
+				96785D592A39DF4B004F1940 /* ScanCarRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -860,6 +888,7 @@
 				96478F302A35ED9A00B8A114 /* ServicesViewModel.swift */,
 				96785D2B2A3607D1004F1940 /* SubmitServiceViewModel.swift */,
 				96785D372A36247E004F1940 /* InvoiceSummaryViewModel.swift */,
+				96785D5B2A39DF9A004F1940 /* OTPViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -900,6 +929,9 @@
 				96478F342A35EECC00B8A114 /* ServicesListModel.swift */,
 				96785D2D2A36119E004F1940 /* SubmitServiceModel.swift */,
 				96785D392A3624A3004F1940 /* InvoiceSummaryModel.swift */,
+				96785D4B2A387F6A004F1940 /* SubmitOrderModel.swift */,
+				96785D4F2A389439004F1940 /* DeleteServiceModel.swift */,
+				96785D552A39DE8D004F1940 /* ScanCarModel.swift */,
 			);
 			path = ServicesModel;
 			sourceTree = "<group>";
@@ -911,6 +943,10 @@
 				96785D292A35F01E004F1940 /* GetServiceInfoEndPoint.swift */,
 				96785D2F2A3611F4004F1940 /* SubmitServiceEndPoint.swift */,
 				96785D3F2A3625A2004F1940 /* InvoiceSummaryEndPoint.swift */,
+				96785D492A387ED8004F1940 /* SubmitOrderEndPoint.swift */,
+				96785D4D2A388B34004F1940 /* DeleteServiceEndPoint.swift */,
+				96785D512A38B7A5004F1940 /* UpdateServiceEndPoint.swift */,
+				96785D532A39DDDA004F1940 /* ScanCarEndPoint.swift */,
 			);
 			path = AddService;
 			sourceTree = "<group>";
@@ -924,6 +960,8 @@
 				96D7D25D2A2FCF8D00A054BC /* ServiceCell.xib */,
 				96D7D24E2A2FC3A000A054BC /* InvoiceCell.swift */,
 				96D7D24F2A2FC3A000A054BC /* InvoiceCell.xib */,
+				967B38072A3F49830016348E /* ServicesHistoryCell.swift */,
+				967B38082A3F49830016348E /* ServicesHistoryCell.xib */,
 			);
 			path = tableCells;
 			sourceTree = "<group>";
@@ -1029,6 +1067,7 @@
 				961150282A2B60320040ABEA /* Roboto-BoldItalic.ttf in Resources */,
 				961150212A2B60320040ABEA /* Roboto-Light.ttf in Resources */,
 				961150232A2B60320040ABEA /* Roboto-MediumItalic.ttf in Resources */,
+				967B380A2A3F49830016348E /* ServicesHistoryCell.xib in Resources */,
 				961150312A2B603D0040ABEA /* Color.xcassets in Resources */,
 				9611500E2A2B60270040ABEA /* Localizable.strings in Resources */,
 				9611502A2A2B60320040ABEA /* Roboto-CondensedItalic.ttf in Resources */,
@@ -1118,6 +1157,7 @@
 				961151262A2B7CDD0040ABEA /* ScanCarViewController.swift in Sources */,
 				9611511B2A2B67AF0040ABEA /* HistoryViewController.swift in Sources */,
 				961151002A2B60D90040ABEA /* SelectLanguageVC.swift in Sources */,
+				96785D5A2A39DF4B004F1940 /* ScanCarRepository.swift in Sources */,
 				96D7D2572A2FC4DE00A054BC /* InvoiceHeaderView.swift in Sources */,
 				96785D2E2A36119E004F1940 /* SubmitServiceModel.swift in Sources */,
 				96785D2C2A3607D1004F1940 /* SubmitServiceViewModel.swift in Sources */,
@@ -1137,11 +1177,13 @@
 				96D7D25E2A2FCF8D00A054BC /* ServiceCell.swift in Sources */,
 				9611508D2A2B60810040ABEA /* UITextFieldExtensions.swift in Sources */,
 				961150972A2B60820040ABEA /* TextFieldExtension.swift in Sources */,
+				96785D4A2A387ED8004F1940 /* SubmitOrderEndPoint.swift in Sources */,
 				961150792A2B60810040ABEA /* CarInfoEndPoint.swift in Sources */,
 				961150782A2B60810040ABEA /* NetworkConstant.swift in Sources */,
 				961150862A2B60810040ABEA /* DownloadFiles.swift in Sources */,
 				96D7D24C2A2F6BD200A054BC /* SuccessViewController.swift in Sources */,
 				961150A32A2B60820040ABEA /* UserInfoModel.swift in Sources */,
+				96785D562A39DE8D004F1940 /* ScanCarModel.swift in Sources */,
 				9611510F2A2B60D90040ABEA /* CarDetailsVC.swift in Sources */,
 				961151132A2B60D90040ABEA /* CarInfoView.swift in Sources */,
 				961150772A2B60810040ABEA /* UserConstant.swift in Sources */,
@@ -1154,6 +1196,7 @@
 				9611507B2A2B60810040ABEA /* SearchEndPoint.swift in Sources */,
 				961151062A2B60D90040ABEA /* ChangePasswordViewModel.swift in Sources */,
 				961150C92A2B60B50040ABEA /* DriverSettingsModel.swift in Sources */,
+				96785D542A39DDDA004F1940 /* ScanCarEndPoint.swift in Sources */,
 				96785D302A3611F4004F1940 /* SubmitServiceEndPoint.swift in Sources */,
 				96C911702A33B19E00EE1803 /* SelectServiceViewModel.swift in Sources */,
 				9611509D2A2B60820040ABEA /* PickerPopupDialog.swift in Sources */,
@@ -1166,6 +1209,8 @@
 				961150FF2A2B60D90040ABEA /* ViewController.swift in Sources */,
 				9611508F2A2B60810040ABEA /* String+Ex.swift in Sources */,
 				9611507E2A2B60810040ABEA /* NetworkParameterHelper.swift in Sources */,
+				96785D502A389439004F1940 /* DeleteServiceModel.swift in Sources */,
+				96785D582A39DED3004F1940 /* ScanCarRepositoryProtocol.swift in Sources */,
 				96D7D2442A2F647D00A054BC /* SelfSizedTableView.swift in Sources */,
 				961150942A2B60820040ABEA /* JKCircleView.swift in Sources */,
 				961150932A2B60810040ABEA /* ShapeUIView.swift in Sources */,
@@ -1180,6 +1225,7 @@
 				9611510E2A2B60D90040ABEA /* ChangePasswordVC.swift in Sources */,
 				9611507A2A2B60810040ABEA /* ChangePassEndPoint.swift in Sources */,
 				961150882A2B60810040ABEA /* UIImageView+Extension.swift in Sources */,
+				96785D4C2A387F6A004F1940 /* SubmitOrderModel.swift in Sources */,
 				96785D3E2A362559004F1940 /* InvoiceSummaryRepository.swift in Sources */,
 				961150A42A2B60820040ABEA /* Deviceinfo.swift in Sources */,
 				9611509E2A2B60820040ABEA /* SettingsModel.swift in Sources */,
@@ -1197,6 +1243,7 @@
 				9611511E2A2B75440040ABEA /* VehiclesCell.swift in Sources */,
 				961150CB2A2B60B50040ABEA /* changePassModel.swift in Sources */,
 				96785D282A35EFD4004F1940 /* ServicesInfoRepositiory.swift in Sources */,
+				967B38092A3F49830016348E /* ServicesHistoryCell.swift in Sources */,
 				9611509C2A2B60820040ABEA /* InfoPlistReader.swift in Sources */,
 				961150922A2B60810040ABEA /* UIViewControllerExtensions.swift in Sources */,
 				96114FF52A253B650040ABEA /* AppDelegate.swift in Sources */,
@@ -1216,6 +1263,8 @@
 				961150A92A2B60820040ABEA /* BaseError.swift in Sources */,
 				961151052A2B60D90040ABEA /* CarsInfoViewModel.swift in Sources */,
 				96785D2A2A35F01E004F1940 /* GetServiceInfoEndPoint.swift in Sources */,
+				96785D5C2A39DF9A004F1940 /* OTPViewModel.swift in Sources */,
+				96785D522A38B7A5004F1940 /* UpdateServiceEndPoint.swift in Sources */,
 				961150B42A2B60970040ABEA /* ChangePasswordProtocol.swift in Sources */,
 				961150812A2B60810040ABEA /* ApiRequestManger.swift in Sources */,
 				96785D322A361366004F1940 /* SubmitServiceRepositoryProtocol.swift in Sources */,
@@ -1226,6 +1275,7 @@
 				96478F352A35EECC00B8A114 /* ServicesListModel.swift in Sources */,
 				96785D3A2A3624A3004F1940 /* InvoiceSummaryModel.swift in Sources */,
 				961151152A2B60D90040ABEA /* DriverSettingsCell.swift in Sources */,
+				96785D4E2A388B34004F1940 /* DeleteServiceEndPoint.swift in Sources */,
 				96478F332A35EDE700B8A114 /* ServicesRepositoryProtocol.swift in Sources */,
 				961150802A2B60810040ABEA /* ErrorHandlerProtocol.swift in Sources */,
 				961150822A2B60810040ABEA /* ParserHandlerProtocol.swift in Sources */,
@@ -1387,9 +1437,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = KibreetService/KibreetService.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3Q293AGLJA;
+				DEVELOPMENT_TEAM = 8A8J99K7X5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KibreetService/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1397,6 +1448,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1416,9 +1468,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = KibreetService/KibreetService.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3Q293AGLJA;
+				DEVELOPMENT_TEAM = 8A8J99K7X5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KibreetService/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1426,6 +1479,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

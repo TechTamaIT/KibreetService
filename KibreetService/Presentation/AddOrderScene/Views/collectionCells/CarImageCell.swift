@@ -23,4 +23,10 @@ class CarImageCell: UICollectionViewCell {
         carImage.layer.cornerRadius = 6
         carImageBackgroundView.layer.cornerRadius = 6
     }
+    
+    func configureCellWithURl(imageURL: String) {
+        carImage.loadImageFromUrl(imgUrl: imageURL)
+        carImage.layer.cornerRadius = 6
+        carImageBackgroundView.layer.cornerRadius = 6
+    }
 }
