@@ -49,7 +49,10 @@ class CarDetailsVC: UIViewController {
     }
     
     @IBAction func scanButtonPressed(_ sender: UIButton) {
-        startSession()
+        //startSession()
+        
+        let firstScanVC = FirstVisiteViewController.instantiate(fromAppStoryboard: .AddOrder)
+        self.present(firstScanVC, animated: true)
     }
     
     

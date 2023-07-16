@@ -15,5 +15,6 @@ target 'KibreetService' do
   pod 'JXPageControl'
   pod 'GoogleMaps'
   pod 'AEOTPTextField'
+  pod 'DropDown', '2.3.2'
 
 end

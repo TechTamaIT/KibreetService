@@ -70,3 +70,7 @@ func decodeJWTPart(_ value: String) -> [String: Any]? {
 
   return payload
 }
+
+extension NSNotification.Name {
+    public static let notAuthorized = NSNotification.Name("NOTAUTHORRIZED")
+}

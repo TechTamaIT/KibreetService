@@ -158,8 +158,8 @@
             filePath = "KibreetService/Presentation/AddOrderScene/Views/UploadServiceViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "setupViewFromUpdateService()"
             landmarkType = "7">
          </BreakpointContent>
@@ -174,8 +174,8 @@
             filePath = "KibreetService/Presentation/AddOrderScene/Views/UploadServiceViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -190,8 +190,8 @@
             filePath = "KibreetService/Presentation/AddOrderScene/Views/UploadServiceViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "setupViewFromUpdateService()"
             landmarkType = "7">
          </BreakpointContent>
@@ -238,42 +238,10 @@
             filePath = "KibreetService/Presentation/AddOrderScene/Views/UploadServiceViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
             landmarkName = "submitButtonDidPressed(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "E967F62A-50A5-40BF-8E59-030D43AAE05A - 72898040cecd10f9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "KibreetService.UploadServiceViewController.submitButtonDidPressed(__C.UIButton) -&gt; ()"
-                  moduleName = "KibreetService"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/essamorabi/Desktop/KibreetService/KibreetService/Presentation/AddOrderScene/Views/UploadServiceViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "130"
-                  endingLineNumber = "130"
-                  offsetFromSymbolStart = "829">
-               </Location>
-               <Location
-                  uuid = "E967F62A-50A5-40BF-8E59-030D43AAE05A - 72898040cecd10f9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "KibreetService.UploadServiceViewController.submitButtonDidPressed(__C.UIButton) -&gt; ()"
-                  moduleName = "KibreetService"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/essamorabi/Desktop/KibreetService/KibreetService/Presentation/AddOrderScene/Views/UploadServiceViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "130"
-                  endingLineNumber = "130"
-                  offsetFromSymbolStart = "891">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -304,7 +272,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "20"
                   endingLineNumber = "20"
-                  offsetFromSymbolStart = "198">
+                  offsetFromSymbolStart = "112">
                </Location>
                <Location
                   uuid = "C7BF4322-8359-4D1A-99CC-F429E0CB28D5 - 9ec7a6d4f1e0c1bd"
@@ -319,7 +287,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "20"
                   endingLineNumber = "20"
-                  offsetFromSymbolStart = "601">
+                  offsetFromSymbolStart = "464">
                </Location>
                <Location
                   uuid = "C7BF4322-8359-4D1A-99CC-F429E0CB28D5 - 9af4482d5557f691"
@@ -334,7 +302,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "22"
                   endingLineNumber = "22"
-                  offsetFromSymbolStart = "92">
+                  offsetFromSymbolStart = "48">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -383,7 +351,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "25"
                   endingLineNumber = "25"
-                  offsetFromSymbolStart = "379">
+                  offsetFromSymbolStart = "548">
                </Location>
                <Location
                   uuid = "57525B49-80E4-4DB0-9AB9-C86833AA1C1F - 20fccb31ed6a8cb9"
@@ -398,7 +366,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "26"
                   endingLineNumber = "26"
-                  offsetFromSymbolStart = "30">
+                  offsetFromSymbolStart = "32">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -431,7 +399,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
                   endingLineNumber = "19"
-                  offsetFromSymbolStart = "148">
+                  offsetFromSymbolStart = "100">
                </Location>
                <Location
                   uuid = "A4046C4D-A0BA-4B0B-A6D2-D8B7994DE5FA - df3b0e3ba17973c4"
@@ -446,7 +414,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
                   endingLineNumber = "19"
-                  offsetFromSymbolStart = "342">
+                  offsetFromSymbolStart = "280">
                </Location>
                <Location
                   uuid = "A4046C4D-A0BA-4B0B-A6D2-D8B7994DE5FA - 5dc7ea94652668bd"
@@ -461,7 +429,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "21"
                   endingLineNumber = "21"
-                  offsetFromSymbolStart = "92">
+                  offsetFromSymbolStart = "48">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -494,7 +462,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "62"
                   endingLineNumber = "62"
-                  offsetFromSymbolStart = "500">
+                  offsetFromSymbolStart = "404">
                </Location>
                <Location
                   uuid = "8DDDE353-8FC6-4644-98D6-E43755CCA13D - ebe3a83e25e93d2"
@@ -509,7 +477,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "64"
                   endingLineNumber = "64"
-                  offsetFromSymbolStart = "92">
+                  offsetFromSymbolStart = "64">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -606,7 +574,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "27"
                   endingLineNumber = "27"
-                  offsetFromSymbolStart = "505">
+                  offsetFromSymbolStart = "412">
                </Location>
                <Location
                   uuid = "785D7A5F-A78D-428A-A96C-3FEB9A40CF4D - 5dc7ea94652669f7"
@@ -621,7 +589,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "27"
                   endingLineNumber = "27"
-                  offsetFromSymbolStart = "455">
+                  offsetFromSymbolStart = "400">
                </Location>
                <Location
                   uuid = "785D7A5F-A78D-428A-A96C-3FEB9A40CF4D - 86ae239e4f60cff4"
@@ -636,7 +604,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "28"
                   endingLineNumber = "28"
-                  offsetFromSymbolStart = "60">
+                  offsetFromSymbolStart = "64">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -701,7 +669,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
                   endingLineNumber = "19"
-                  offsetFromSymbolStart = "103">
+                  offsetFromSymbolStart = "100">
                </Location>
                <Location
                   uuid = "4679408D-0AD7-4DB5-B96D-CDC5C327A218 - bb58f3d844a8d53d"
@@ -716,7 +684,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
                   endingLineNumber = "19"
-                  offsetFromSymbolStart = "139">
+                  offsetFromSymbolStart = "140">
                </Location>
                <Location
                   uuid = "4679408D-0AD7-4DB5-B96D-CDC5C327A218 - c7c46abfc2e061f2"
@@ -746,7 +714,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
                   endingLineNumber = "19"
-                  offsetFromSymbolStart = "15">
+                  offsetFromSymbolStart = "16">
                </Location>
                <Location
                   uuid = "4679408D-0AD7-4DB5-B96D-CDC5C327A218 - 1bb686b57ce56e58"
@@ -761,7 +729,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
                   endingLineNumber = "19"
-                  offsetFromSymbolStart = "405">
+                  offsetFromSymbolStart = "352">
                </Location>
                <Location
                   uuid = "4679408D-0AD7-4DB5-B96D-CDC5C327A218 - 2a3a49538b59f234"
@@ -776,7 +744,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "19"
                   endingLineNumber = "19"
-                  offsetFromSymbolStart = "362">
+                  offsetFromSymbolStart = "328">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -807,9 +775,25 @@
             filePath = "KibreetService/Presentation/HomeScene/View/CarDetailsVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "updateUI()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E896ABC0-3679-48E8-84FD-673DB002350E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KibreetService/Presentation/AddOrderScene/Views/UploadServiceViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
+            landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -52,7 +52,12 @@ public class ApiManager: ApiManagerProtocol {
                     let string = String.init(data: data, encoding: .utf8)
                     print("✅ URL:  \(url ?? "❌")")
                     print("✅ Response \(string ?? "❌")")
-                    
+                    if (400...500).contains(response.response?.statusCode ?? 0){
+                        print(response.response?.statusCode ?? 0)
+                        if response.response?.statusCode == 401 {
+                            NotificationCenter.default.post(name: .notAuthorized, object: nil)
+                        }
+                    }
 //                    #endif
                     let parserResult: Result<T,Error> = self.parser.ParserHandler(parsefrom: data)
                     switch parserResult {

@@ -56,8 +56,10 @@ class LoginVC: UIViewController {
     
     func goToHomeScreen() {
         guard let homeVC = UIStoryboard.init(name:"Home", bundle: nil).instantiateViewController(withIdentifier: "MainTabBar") as? UITabBarController else {return}
-        UIApplication.shared.windows.first?.rootViewController = homeVC
-        UIApplication.shared.windows.first?.makeKeyAndVisible()
+        homeVC.modalPresentationStyle = .fullScreen
+        self.present(homeVC, animated: true)
+//        UIApplication.shared.windows.first?.rootViewController = homeVC
+//        UIApplication.shared.windows.first?.makeKeyAndVisible()
     }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {

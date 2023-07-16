@@ -154,6 +154,13 @@
 		96785D5C2A39DF9A004F1940 /* OTPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96785D5B2A39DF9A004F1940 /* OTPViewModel.swift */; };
 		967B38092A3F49830016348E /* ServicesHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967B38072A3F49830016348E /* ServicesHistoryCell.swift */; };
 		967B380A2A3F49830016348E /* ServicesHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 967B38082A3F49830016348E /* ServicesHistoryCell.xib */; };
+		967B38102A5E0AD00016348E /* FirstVisiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967B380F2A5E0AD00016348E /* FirstVisiteViewController.swift */; };
+		96B4170E2A64A28C00B2917E /* FirstTimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B4170D2A64A28C00B2917E /* FirstTimeViewModel.swift */; };
+		96B417102A64A32200B2917E /* VehiclesTypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B4170F2A64A32200B2917E /* VehiclesTypeModel.swift */; };
+		96B417122A64A38800B2917E /* GetVehicleTypesEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B417112A64A38700B2917E /* GetVehicleTypesEndPoint.swift */; };
+		96B417142A64A42900B2917E /* FirstTimeRepoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B417132A64A42900B2917E /* FirstTimeRepoProtocol.swift */; };
+		96B417162A64A53900B2917E /* FirstTimeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B417152A64A53900B2917E /* FirstTimeRepository.swift */; };
+		96B417182A64A5A500B2917E /* SubmitFirstTimeEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B417172A64A5A500B2917E /* SubmitFirstTimeEndPoint.swift */; };
 		96C911672A33A9CB00EE1803 /* ServiceCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C911662A33A9CB00EE1803 /* ServiceCategory.swift */; };
 		96C911692A33AF3A00EE1803 /* ServiceCenterCategoriesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C911682A33AF3A00EE1803 /* ServiceCenterCategoriesProtocol.swift */; };
 		96C9116C2A33AFDB00EE1803 /* GetCategoryEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C9116B2A33AFDB00EE1803 /* GetCategoryEndPoint.swift */; };
@@ -331,6 +338,13 @@
 		96785D5B2A39DF9A004F1940 /* OTPViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewModel.swift; sourceTree = "<group>"; };
 		967B38072A3F49830016348E /* ServicesHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesHistoryCell.swift; sourceTree = "<group>"; };
 		967B38082A3F49830016348E /* ServicesHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesHistoryCell.xib; sourceTree = "<group>"; };
+		967B380F2A5E0AD00016348E /* FirstVisiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVisiteViewController.swift; sourceTree = "<group>"; };
+		96B4170D2A64A28C00B2917E /* FirstTimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeViewModel.swift; sourceTree = "<group>"; };
+		96B4170F2A64A32200B2917E /* VehiclesTypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesTypeModel.swift; sourceTree = "<group>"; };
+		96B417112A64A38700B2917E /* GetVehicleTypesEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetVehicleTypesEndPoint.swift; sourceTree = "<group>"; };
+		96B417132A64A42900B2917E /* FirstTimeRepoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeRepoProtocol.swift; sourceTree = "<group>"; };
+		96B417152A64A53900B2917E /* FirstTimeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeRepository.swift; sourceTree = "<group>"; };
+		96B417172A64A5A500B2917E /* SubmitFirstTimeEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitFirstTimeEndPoint.swift; sourceTree = "<group>"; };
 		96C911662A33A9CB00EE1803 /* ServiceCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCategory.swift; sourceTree = "<group>"; };
 		96C911682A33AF3A00EE1803 /* ServiceCenterCategoriesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCenterCategoriesProtocol.swift; sourceTree = "<group>"; };
 		96C9116B2A33AFDB00EE1803 /* GetCategoryEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCategoryEndPoint.swift; sourceTree = "<group>"; };
@@ -668,6 +682,7 @@
 				96785D312A361366004F1940 /* SubmitServiceRepositoryProtocol.swift */,
 				96785D3B2A362504004F1940 /* InvoiceSummaryRepositoryProtocol.swift */,
 				96785D572A39DED3004F1940 /* ScanCarRepositoryProtocol.swift */,
+				96B417132A64A42900B2917E /* FirstTimeRepoProtocol.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -753,6 +768,7 @@
 				96785D352A36140D004F1940 /* SubmitServiceRepository.swift */,
 				96785D3D2A362559004F1940 /* InvoiceSummaryRepository.swift */,
 				96785D592A39DF4B004F1940 /* ScanCarRepository.swift */,
+				96B417152A64A53900B2917E /* FirstTimeRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -889,6 +905,7 @@
 				96785D2B2A3607D1004F1940 /* SubmitServiceViewModel.swift */,
 				96785D372A36247E004F1940 /* InvoiceSummaryViewModel.swift */,
 				96785D5B2A39DF9A004F1940 /* OTPViewModel.swift */,
+				96B4170D2A64A28C00B2917E /* FirstTimeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -907,6 +924,7 @@
 				96D7D24B2A2F6BD200A054BC /* SuccessViewController.swift */,
 				96478F252A35DB4600B8A114 /* UploadServiceViewController.swift */,
 				96785D412A36324E004F1940 /* OrderHistoryViewController.swift */,
+				967B380F2A5E0AD00016348E /* FirstVisiteViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -932,6 +950,7 @@
 				96785D4B2A387F6A004F1940 /* SubmitOrderModel.swift */,
 				96785D4F2A389439004F1940 /* DeleteServiceModel.swift */,
 				96785D552A39DE8D004F1940 /* ScanCarModel.swift */,
+				96B4170F2A64A32200B2917E /* VehiclesTypeModel.swift */,
 			);
 			path = ServicesModel;
 			sourceTree = "<group>";
@@ -947,6 +966,8 @@
 				96785D4D2A388B34004F1940 /* DeleteServiceEndPoint.swift */,
 				96785D512A38B7A5004F1940 /* UpdateServiceEndPoint.swift */,
 				96785D532A39DDDA004F1940 /* ScanCarEndPoint.swift */,
+				96B417112A64A38700B2917E /* GetVehicleTypesEndPoint.swift */,
+				96B417172A64A5A500B2917E /* SubmitFirstTimeEndPoint.swift */,
 			);
 			path = AddService;
 			sourceTree = "<group>";
@@ -1159,6 +1180,7 @@
 				961151002A2B60D90040ABEA /* SelectLanguageVC.swift in Sources */,
 				96785D5A2A39DF4B004F1940 /* ScanCarRepository.swift in Sources */,
 				96D7D2572A2FC4DE00A054BC /* InvoiceHeaderView.swift in Sources */,
+				967B38102A5E0AD00016348E /* FirstVisiteViewController.swift in Sources */,
 				96785D2E2A36119E004F1940 /* SubmitServiceModel.swift in Sources */,
 				96785D2C2A3607D1004F1940 /* SubmitServiceViewModel.swift in Sources */,
 				961150892A2B60810040ABEA /* UIColor+Extension.swift in Sources */,
@@ -1186,6 +1208,7 @@
 				96785D562A39DE8D004F1940 /* ScanCarModel.swift in Sources */,
 				9611510F2A2B60D90040ABEA /* CarDetailsVC.swift in Sources */,
 				961151132A2B60D90040ABEA /* CarInfoView.swift in Sources */,
+				96B4170E2A64A28C00B2917E /* FirstTimeViewModel.swift in Sources */,
 				961150772A2B60810040ABEA /* UserConstant.swift in Sources */,
 				961150CC2A2B60B50040ABEA /* LoginModel.swift in Sources */,
 				96C911692A33AF3A00EE1803 /* ServiceCenterCategoriesProtocol.swift in Sources */,
@@ -1204,10 +1227,12 @@
 				961150952A2B60820040ABEA /* UIFontExtension.swift in Sources */,
 				9611507F2A2B60810040ABEA /* NetworkConnectivityManager.swift in Sources */,
 				961150992A2B60820040ABEA /* loadingManager.swift in Sources */,
+				96B417122A64A38800B2917E /* GetVehicleTypesEndPoint.swift in Sources */,
 				961150902A2B60810040ABEA /* Ex+Storyboard.swift in Sources */,
 				9611508C2A2B60810040ABEA /* SpinerLayer.swift in Sources */,
 				961150FF2A2B60D90040ABEA /* ViewController.swift in Sources */,
 				9611508F2A2B60810040ABEA /* String+Ex.swift in Sources */,
+				96B417142A64A42900B2917E /* FirstTimeRepoProtocol.swift in Sources */,
 				9611507E2A2B60810040ABEA /* NetworkParameterHelper.swift in Sources */,
 				96785D502A389439004F1940 /* DeleteServiceModel.swift in Sources */,
 				96785D582A39DED3004F1940 /* ScanCarRepositoryProtocol.swift in Sources */,
@@ -1218,6 +1243,7 @@
 				96785D402A3625A2004F1940 /* InvoiceSummaryEndPoint.swift in Sources */,
 				96C911782A33B99500EE1803 /* ServiceCategoryView.swift in Sources */,
 				96478F2E2A35E63F00B8A114 /* CarImageCell.swift in Sources */,
+				96B417182A64A5A500B2917E /* SubmitFirstTimeEndPoint.swift in Sources */,
 				96D7D2502A2FC3A000A054BC /* InvoiceCell.swift in Sources */,
 				961150FB2A2B60D90040ABEA /* LoginViewModel.swift in Sources */,
 				961151042A2B60D90040ABEA /* OnBoardingVC.swift in Sources */,
@@ -1248,6 +1274,7 @@
 				961150922A2B60810040ABEA /* UIViewControllerExtensions.swift in Sources */,
 				96114FF52A253B650040ABEA /* AppDelegate.swift in Sources */,
 				9611508E2A2B60810040ABEA /* Ex+UIViewController.swift in Sources */,
+				96B417102A64A32200B2917E /* VehiclesTypeModel.swift in Sources */,
 				96C911672A33A9CB00EE1803 /* ServiceCategory.swift in Sources */,
 				961150962A2B60820040ABEA /* String+Date.swift in Sources */,
 				9611507C2A2B60810040ABEA /* HomeEndPoint.swift in Sources */,
@@ -1262,6 +1289,7 @@
 				961150CF2A2B60B50040ABEA /* ChangePasswordRepository.swift in Sources */,
 				961150A92A2B60820040ABEA /* BaseError.swift in Sources */,
 				961151052A2B60D90040ABEA /* CarsInfoViewModel.swift in Sources */,
+				96B417162A64A53900B2917E /* FirstTimeRepository.swift in Sources */,
 				96785D2A2A35F01E004F1940 /* GetServiceInfoEndPoint.swift in Sources */,
 				96785D5C2A39DF9A004F1940 /* OTPViewModel.swift in Sources */,
 				96785D522A38B7A5004F1940 /* UpdateServiceEndPoint.swift in Sources */,
@@ -1443,11 +1471,12 @@
 				DEVELOPMENT_TEAM = 8A8J99K7X5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KibreetService/Info.plist;
+				INFOPLIST_KEY_NFCReaderUsageDescription = "Kibreet need to acces NFC to be able to read cards";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Kibreet requires access to the photo library to send car photos ";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1474,11 +1503,12 @@
 				DEVELOPMENT_TEAM = 8A8J99K7X5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KibreetService/Info.plist;
+				INFOPLIST_KEY_NFCReaderUsageDescription = "Kibreet need to acces NFC to be able to read cards";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Kibreet requires access to the photo library to send car photos ";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

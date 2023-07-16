@@ -59,7 +59,6 @@ class UploadServiceViewController: UIViewController {
             serviceNameHeaderLabel.text = service.serviceTypeName + " " + "Service".localized()
             serviceNameLabel.text = service.serviceTypeName
             for imageURL in service.images {
-                
                 let url = URL(string: imageURL)
                 let data = try? Data(contentsOf: url!)
                 images.append(UIImage(data: data!) ?? UIImage())
