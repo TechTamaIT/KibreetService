@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NFCReaderUsageDescription</key>
+	<string>Kibreet need to use NFC to be able to read drivers cards</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Kibreet need to access your camera to upload cars photos </string>
 </dict>

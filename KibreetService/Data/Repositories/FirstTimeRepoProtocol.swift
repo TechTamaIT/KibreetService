@@ -10,5 +10,5 @@ import Combine
 
 protocol FirstTimeRepoProtocol {
     func getVehcileTypes() -> Future<[VehiclesTypeModel], Error>
-    func submitFirstTimeScan(carPlateNo: String, vehicleType: Int, driverCode: String) -> Future<String, Error>
+    func submitFirstTimeScan(carPlateNo: String, vehicleType: Int, driverCode: Int) -> Future<FirstScanResponse, Error>
 }

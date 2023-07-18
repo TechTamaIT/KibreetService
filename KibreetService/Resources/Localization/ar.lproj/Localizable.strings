@@ -96,3 +96,13 @@
 "Car Plate Number"="رقم لوحه السيارة";
 "Vehicle Type"="نوع المركبة";
 "Driver Code"="كود السائق";
+"Please fill all information to continue"="يرجى ملء جميع المعلومات للمتابعة";
+"Write Info to NFC"="اكتب معلومات إلى NFC";
+"More than one tag presented. please remove them and try again"="تم تقديم أكثر من علامة واحدة. يرجى إزالتها والمحاولة مرة أخرى";
+"Unable to connect to tag"="غير قادر على الاتصال بالعلامة";
+"NFC tag not supported"="علامة NFC غير مدعومة";
+"NFC tag is locked"="علامة NFC مؤمنة";
+"write code failed"="فشلت كتابة الكود";
+"Nice, Tag has been activated"="جميل ، تم تنشيط العلامة";
+"unknown error occured"="حدث خطأ غير معروف";
+

@@ -6,6 +6,7 @@ PODS:
   - GoogleMaps/Base (7.2.0)
   - GoogleMaps/Maps (7.2.0):
     - GoogleMaps/Base
+  - iOSDropDown (0.4.0)
   - IQKeyboardManagerSwift (6.5.10)
   - JXPageControl (0.1.5):
     - JXPageControl/Common (= 0.1.5)
@@ -30,6 +31,7 @@ DEPENDENCIES:
   - AEOTPTextField
   - Alamofire
   - GoogleMaps
+  - iOSDropDown
   - IQKeyboardManagerSwift
   - JXPageControl
   - Kingfisher
@@ -42,6 +44,7 @@ SPEC REPOS:
     - AEOTPTextField
     - Alamofire
     - GoogleMaps
+    - iOSDropDown
     - IQKeyboardManagerSwift
     - JXPageControl
     - Kingfisher
@@ -53,6 +56,7 @@ SPEC CHECKSUMS:
   AEOTPTextField: a275823fde05601c5da7f8fb66aaecb41289b370
   Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
   GoogleMaps: 65ce5426e2398bb81433c8076f2ab6419c2c5537
+  iOSDropDown: ce9daa584eaa5567cafc1b633e3cc7eb6d9cea42
   IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
   JXPageControl: e9487b39e2e58fc17790833214f3b8e935bef98b
   Kingfisher: cd762a593a61b2fbecf7645c00f9a801a3ebfc9c
@@ -60,6 +64,6 @@ SPEC CHECKSUMS:
   lottie-ios: efa7224964a14f690efc7d3996e7dfebdcd3b499
   MOLH: e45827d200aeb1310641090fd8cd03ad2b42ae72
 
-PODFILE CHECKSUM: 8b1aecbeec8f6144ca5e7b6d8d27805e0e6adb51
+PODFILE CHECKSUM: 5fc7981ddab92042b2e50ed31b22f754ef08689c
 
 COCOAPODS: 1.12.0

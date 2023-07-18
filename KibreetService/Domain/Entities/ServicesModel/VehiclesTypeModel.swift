@@ -11,3 +11,7 @@ struct VehiclesTypeModel: Codable {
     let vehicleTypeNameEn, vehicleTypeNameAr: String
     let vehicleType: Int
 }
+
+struct FirstScanResponse: Codable {
+    let encryptedNfc: String
+}

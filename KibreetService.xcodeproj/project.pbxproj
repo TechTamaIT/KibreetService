@@ -155,6 +155,7 @@
 		967B38092A3F49830016348E /* ServicesHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967B38072A3F49830016348E /* ServicesHistoryCell.swift */; };
 		967B380A2A3F49830016348E /* ServicesHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 967B38082A3F49830016348E /* ServicesHistoryCell.xib */; };
 		967B38102A5E0AD00016348E /* FirstVisiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967B380F2A5E0AD00016348E /* FirstVisiteViewController.swift */; };
+		968FDBAC2A6713EB0065753A /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968FDBAB2A6713EB0065753A /* test.swift */; };
 		96B4170E2A64A28C00B2917E /* FirstTimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B4170D2A64A28C00B2917E /* FirstTimeViewModel.swift */; };
 		96B417102A64A32200B2917E /* VehiclesTypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B4170F2A64A32200B2917E /* VehiclesTypeModel.swift */; };
 		96B417122A64A38800B2917E /* GetVehicleTypesEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B417112A64A38700B2917E /* GetVehicleTypesEndPoint.swift */; };
@@ -339,6 +340,7 @@
 		967B38072A3F49830016348E /* ServicesHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesHistoryCell.swift; sourceTree = "<group>"; };
 		967B38082A3F49830016348E /* ServicesHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesHistoryCell.xib; sourceTree = "<group>"; };
 		967B380F2A5E0AD00016348E /* FirstVisiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVisiteViewController.swift; sourceTree = "<group>"; };
+		968FDBAB2A6713EB0065753A /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		96B4170D2A64A28C00B2917E /* FirstTimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeViewModel.swift; sourceTree = "<group>"; };
 		96B4170F2A64A32200B2917E /* VehiclesTypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesTypeModel.swift; sourceTree = "<group>"; };
 		96B417112A64A38700B2917E /* GetVehicleTypesEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetVehicleTypesEndPoint.swift; sourceTree = "<group>"; };
@@ -925,6 +927,7 @@
 				96478F252A35DB4600B8A114 /* UploadServiceViewController.swift */,
 				96785D412A36324E004F1940 /* OrderHistoryViewController.swift */,
 				967B380F2A5E0AD00016348E /* FirstVisiteViewController.swift */,
+				968FDBAB2A6713EB0065753A /* test.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1289,6 +1292,7 @@
 				961150CF2A2B60B50040ABEA /* ChangePasswordRepository.swift in Sources */,
 				961150A92A2B60820040ABEA /* BaseError.swift in Sources */,
 				961151052A2B60D90040ABEA /* CarsInfoViewModel.swift in Sources */,
+				968FDBAC2A6713EB0065753A /* test.swift in Sources */,
 				96B417162A64A53900B2917E /* FirstTimeRepository.swift in Sources */,
 				96785D2A2A35F01E004F1940 /* GetServiceInfoEndPoint.swift in Sources */,
 				96785D5C2A39DF9A004F1940 /* OTPViewModel.swift in Sources */,

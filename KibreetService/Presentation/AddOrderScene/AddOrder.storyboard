@@ -1784,7 +1784,7 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="djH-O5-EU9">
                                                         <rect key="frame" x="16" y="0.0" width="329" height="48"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                        <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1833,7 +1833,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J0O-gI-ww2" customClass="CardView" customModule="KibreetService" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="26.000000000000028" width="345" height="48"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iQa-G2-xZ7">
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iQa-G2-xZ7" customClass="JRDropDown">
                                                         <rect key="frame" x="16" y="0.0" width="329" height="48"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -1950,19 +1950,50 @@
                                     <action selector="closeButtonDidPressed:" destination="J4M-zj-XUn" eventType="touchUpInside" id="lcp-cY-6CY"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNV-CV-jHW" customClass="CardView" customModule="KibreetService" customModuleProvider="target">
+                                <rect key="frame" x="24" y="664" width="345" height="42"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirmed Successfully" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6D4-Uq-Mu9">
+                                        <rect key="frame" x="91.333333333333329" y="12" width="162.66666666666669" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" name="greenColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizeKey" value="Confirmed Successfully"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="success"/>
+                                <constraints>
+                                    <constraint firstItem="6D4-Uq-Mu9" firstAttribute="centerX" secondItem="hNV-CV-jHW" secondAttribute="centerX" id="7QM-sj-lHP"/>
+                                    <constraint firstItem="6D4-Uq-Mu9" firstAttribute="centerY" secondItem="hNV-CV-jHW" secondAttribute="centerY" id="7pS-1F-W6k"/>
+                                    <constraint firstAttribute="height" constant="42" id="F1x-9t-g1L"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="_cornerRadius">
+                                        <real key="value" value="21"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_shadowColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="I3B-tD-OdX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="I3B-tD-OdX" firstAttribute="trailing" secondItem="u1W-Nt-qBU" secondAttribute="trailing" constant="24" id="8g0-6w-Dpq"/>
+                            <constraint firstItem="hNV-CV-jHW" firstAttribute="leading" secondItem="I3B-tD-OdX" secondAttribute="leading" constant="24" id="8zL-l1-X7f"/>
                             <constraint firstItem="I3B-tD-OdX" firstAttribute="trailing" secondItem="TmY-aU-PU6" secondAttribute="trailing" constant="24" id="Fwz-KU-7fw"/>
                             <constraint firstItem="u1W-Nt-qBU" firstAttribute="leading" secondItem="I3B-tD-OdX" secondAttribute="leading" constant="24" id="O7B-Kr-b6Z"/>
                             <constraint firstItem="I3B-tD-OdX" firstAttribute="bottom" secondItem="pGP-ha-ofR" secondAttribute="bottom" constant="32" id="R2X-Xg-wVs"/>
                             <constraint firstItem="TmY-aU-PU6" firstAttribute="centerY" secondItem="GA8-eF-h2O" secondAttribute="centerY" id="Wst-jj-z2Y"/>
+                            <constraint firstItem="pGP-ha-ofR" firstAttribute="top" secondItem="hNV-CV-jHW" secondAttribute="bottom" constant="24" id="ZcS-Ij-utu"/>
                             <constraint firstItem="I3B-tD-OdX" firstAttribute="trailing" secondItem="pGP-ha-ofR" secondAttribute="trailing" constant="24" id="aEg-Jy-di6"/>
                             <constraint firstItem="GA8-eF-h2O" firstAttribute="top" secondItem="I3B-tD-OdX" secondAttribute="top" constant="24" id="f8Q-Aq-nu0"/>
                             <constraint firstItem="pGP-ha-ofR" firstAttribute="leading" secondItem="I3B-tD-OdX" secondAttribute="leading" constant="24" id="kpr-zI-GQS"/>
                             <constraint firstItem="GA8-eF-h2O" firstAttribute="leading" secondItem="I3B-tD-OdX" secondAttribute="leading" constant="24" id="mC1-IP-zKR"/>
+                            <constraint firstItem="I3B-tD-OdX" firstAttribute="trailing" secondItem="hNV-CV-jHW" secondAttribute="trailing" constant="24" id="tee-7q-jC6"/>
                             <constraint firstItem="u1W-Nt-qBU" firstAttribute="top" secondItem="GA8-eF-h2O" secondAttribute="bottom" constant="32" id="yFI-jq-Cez"/>
                         </constraints>
                     </view>
@@ -1971,6 +2002,7 @@
                         <outlet property="driverCodeTF" destination="Dtt-xM-4QF" id="cQI-Xr-dNf"/>
                         <outlet property="platNumberTF" destination="djH-O5-EU9" id="dgQ-ym-gbT"/>
                         <outlet property="submitButton" destination="pGP-ha-ofR" id="w5n-ie-zkh"/>
+                        <outlet property="successfulView" destination="hNV-CV-jHW" id="YfM-WD-32R"/>
                         <outlet property="vehicleTypeTF" destination="iQa-G2-xZ7" id="8fd-za-Jur"/>
                     </connections>
                 </viewController>
@@ -2228,6 +2260,14 @@
             <point key="canvasLocation" x="2989" y="-2"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="iQa-G2-xZ7">
+            <size key="intrinsicContentSize" width="4" height="18.666666666666668"/>
+        </designable>
+        <designable name="kLh-it-zby">
+            <size key="intrinsicContentSize" width="32" height="34"/>
+        </designable>
+    </designables>
     <resources>
         <image name="Completed-pana" width="207" height="230.66667175292969"/>
         <image name="backArrow" width="24" height="24"/>
@@ -2243,6 +2283,9 @@
         <namedColor name="forgetPassColor">
             <color red="0.32941176470588235" green="0.35686274509803922" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="greenColor">
+            <color red="0.011764705882352941" green="0.46274509803921571" blue="0.027450980392156862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="languagesecondColor">
             <color red="0.44705882352941179" green="0.47450980392156861" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -2251,6 +2294,9 @@
         </namedColor>
         <namedColor name="onboardingTextColor">
             <color red="0.29019607843137257" green="0.33725490196078434" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="success">
+            <color red="0.0" green="0.49411764705882355" blue="0.039215686274509803" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

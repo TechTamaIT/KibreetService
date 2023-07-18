@@ -13,7 +13,7 @@ struct FirstTimeRepository: FirstTimeRepoProtocol {
         return ApiManager().apiCall(endPoint: GetVehicleTypesEndPoint())
     }
     
-    func submitFirstTimeScan(carPlateNo: String, vehicleType: Int, driverCode: String) -> Future<String, Error> {
+    func submitFirstTimeScan(carPlateNo: String, vehicleType: Int, driverCode: Int) -> Future<FirstScanResponse, Error> {
         return ApiManager().apiCall(endPoint: SubmitFirstTimeEndPoint())
     }
 }
