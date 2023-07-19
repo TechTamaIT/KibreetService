@@ -142,6 +142,10 @@ extension CarDetailsVC: NFCNDEFReaderSessionDelegate {
     }
 
     func readerSession(_ session: NFCNDEFReaderSession, didInvalidateWithError error: Error) {
-        print(error.localizedDescription)
+        if let readerError = error as? NFCReaderError {
+            if (readerError.code != .readerSessionInvalidationErrorFirstNDEFTagRead) && (readerError.code != .readerSessionInvalidationErrorUserCanceled) {
+                self.showLocalizedAlert(style: .alert, title: "Error".localized(), message: "Session Invalidate".localized(), buttonTitle: "Ok".localized())
+            }
+        }
     }
 }

@@ -20,6 +20,7 @@ class FirstVisiteViewController: UIViewController {
     @IBOutlet weak var successfulView: CardView!
     
     private let firstTimeViewModel = FirstTimeViewModel()
+    private let oTPViewModel = OTPViewModel()
     private var bindings = Set<AnyCancellable>()
     var selectedVehicleType = 0
     var session: NFCNDEFReaderSession?
@@ -107,6 +108,41 @@ class FirstVisiteViewController: UIViewController {
                 }
             }
         }).store(in: &bindings)
+        
+        
+        oTPViewModel.result.sink(receiveCompletion: {completion in
+            switch completion {
+            case .failure(let error):
+                self.showLocalizedAlert(style: .alert, title: "Error".localized(), message: error.localizedDescription, buttonTitle: "Ok".localized())
+            case .finished:
+                print("SUCCESS ")
+            }
+        }, receiveValue: {[unowned self] value in
+            self.finishSubmitting(message: value.message)
+        }).store(in: &bindings)
+        
+        oTPViewModel.message.sink(receiveCompletion: {completion in
+            switch completion {
+            case .failure(let error):
+                self.showLocalizedAlert(style: .alert, title: "Error".localized(), message: error.localizedDescription, buttonTitle: "Ok".localized())
+            case .finished:
+                print("SUCCESS ")
+            }
+        }, receiveValue: {[unowned self] value in
+            if value != nil {
+                self.showLocalizedAlert(style: .alert, title: "Error".localized(), message: value!, buttonTitle: "Ok".localized())
+            }
+        }).store(in: &bindings)
+    }
+    
+    func finishSubmitting(message: String) {
+        let alert = UIAlertController(title: "Error".localized(), message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok".localized(), style: .default) { _ in
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "scanComplete"), object: nil)
+            self.dismiss(animated: true)
+        }
+        alert.addAction(okAction)
+        self.present(alert, animated: true)
     }
     
     func updateDropDown() {
@@ -140,6 +176,10 @@ class FirstVisiteViewController: UIViewController {
         session = NFCNDEFReaderSession(delegate: self, queue: nil, invalidateAfterFirstRead: true)
         session?.alertMessage = "Hold your IPhone near NFC tag to write the code".localized()
         session?.begin()
+    }
+    
+    func uploadVehicleInfo() {
+        oTPViewModel.uploadScannedCarInfo(vehicleNfc: firstTimeViewModel.NFCEncriptedData)
     }
     
     
@@ -208,6 +248,7 @@ extension FirstVisiteViewController: NFCNDEFReaderSessionDelegate {
                         if error != nil {
                             session.alertMessage = "write code failed".localized()
                         } else {
+                            self.uploadVehicleInfo()
                             session.alertMessage = "Nice, Tag has been activated".localized()
                         }
                         session.invalidate()
